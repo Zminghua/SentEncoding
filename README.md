@@ -28,7 +28,7 @@ This will automatically download and preprocess the transfer tasks datasets, and
 ## Sentence encoder
 We provide a simple interface to encode English sentences. Get started with the following steps:
 
-*1) Download our [Mean-Max AAE](https://drive.google.com/drive/folders/1hRHU1-NPgpFOom7CH-g6DS48D2R7Mak-?usp=sharing) models:*
+*1) Download our [Mean-Max AAE](https://drive.google.com/drive/folders/1hRHU1-NPgpFOom7CH-g6DS48D2R7Mak-?usp=sharing) models and put it to **SentEncoding** directory, then decompress:*
 ```bash
 unzip models.zip
 ```
