@@ -1,0 +1,57 @@
+
+{
+    "meta":
+        {
+            "Version" : 1.0,
+            "Date"    :"2018-10-21",
+            "Author"  :"Minghua Zhang",
+            "Mail"    :"zhangmh@pku.edu.cn",
+            "Model"   :"Mean-Max Attention Autoencoder",
+            "Corpus"  :"Toronto Books Corpus"
+        },
+
+    "path":
+        {
+            "train"  : "%s/data/bookcorpus/train.txt",
+            "valid"  : "%s/data/bookcorpus/valid.txt",
+            "decode" : "%s/data/bookcorpus/test.txt",
+            "tasks"  : "%s/data/senteval_data/",
+            "models" : "%s/models/",
+            "vocab"  : "%s/data/bookcorpus/books.vocab",
+            "w2v"    : "%s/data/glove.840B.300d.txt"
+        },
+    
+    "option":
+        {
+            "is_training" : true,
+            
+            "word_freq" : 1000,
+            "vocab_size": 21583,
+            "maxlen"    : 32,
+            "minlen"    : 4,
+           
+            "position"  : "emb",
+            "dim_word"  : 300,
+            "dim_model" : 2048,
+            "head"      : 8,
+            "dim_inner" : 4096,
+            "layer_n"   : 1,
+            
+            "clip_grad" : 5.0,
+            "drop_rate" : 0.5,
+            "lrate"     : 0.0002,
+            "optimizer" : "adam",
+            "batch_size": 64,
+            "decode_bs" : 96,
+            "encode_bs" : 96,
+            
+            "checkpoint" : 0,
+            "dispFreq"   : 100,
+            "summaryFreq": 100,
+            "validFreq"  : 500,
+            "decodeFreq" : 1000,
+            "saveFreq"   : 1000,
+            "finish"     : 100000
+        }
+}
+
