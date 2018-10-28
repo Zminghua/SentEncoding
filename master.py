@@ -122,7 +122,7 @@ class Master:
             self.sess.run(tf.global_variables_initializer())
             self.saver = tf.train.Saver(max_to_keep=None)
             
-            chk_path = self.conf['path']['models'] + 'model-%d' % (self.conf['option']['checkpoint'])
+            chk_path = self.conf['path']['models'] + self.conf['option']['model']
             if tf.train.checkpoint_exists(chk_path):
                 self.saver.restore(self.sess, chk_path)
 

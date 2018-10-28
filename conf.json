@@ -15,15 +15,16 @@
             "train"  : "%s/data/bookcorpus/train.txt",
             "valid"  : "%s/data/bookcorpus/valid.txt",
             "decode" : "%s/data/bookcorpus/test.txt",
-            "tasks"  : "%s/data/senteval_data/",
-            "models" : "%s/models/",
             "vocab"  : "%s/data/bookcorpus/books.vocab",
-            "w2v"    : "%s/data/glove.840B.300d.txt"
+            "w2v"    : "%s/data/glove.840B.300d.txt",
+            "tasks"  : "%s/data/senteval_data/",
+            "models" : "%s/models/"
         },
     
     "option":
         {
-            "is_training" : true,
+            "is_training" : false,
+            "model"       : "Mean-Max-AAE",
             
             "word_freq" : 1000,
             "vocab_size": 21583,
@@ -45,7 +46,6 @@
             "decode_bs" : 96,
             "encode_bs" : 96,
             
-            "checkpoint" : 0,
             "dispFreq"   : 100,
             "summaryFreq": 100,
             "validFreq"  : 500,
