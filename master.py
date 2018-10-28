@@ -15,6 +15,7 @@ import logging
 import subprocess
 from collections import defaultdict
 from scipy.linalg import norm
+from nltk.tokenize import word_tokenize
 import tensorflow as tf
 import graph
 import data
@@ -45,6 +46,17 @@ class Master:
             word,freq = lines[i].strip('\n').split()
             if int(freq) >= self.conf['option']['word_freq']:
                 vocab[word] = 1
+        return vocab
+
+
+    def build_vocab(self, sentences, tokenize=False):
+        vocab = defaultdict(lambda : 0)
+        sentences = [s.split() if not tokenize else word_tokenize(s) for s in sentences]
+        for sent in sentences:
+            for word in sent:
+                vocab[word] = 1
+        vocab['<s>'] = 1
+        vocab['</s>'] = 1
         return vocab
 
 
@@ -238,11 +250,11 @@ class Master:
             logging.info(lines[0].strip(' -1=\n'))
 
 
-    def encode(self, task_data, use_norm=True):
+    def encode(self, task_data, tokenize=False, use_norm=True):
         features = numpy.zeros((len(task_data), 2*self.conf['option']['dim_model']), dtype='float32')
 
         ds = defaultdict(list)
-        captions = [s.split() for s in task_data]
+        captions = [s.split() if not tokenize else word_tokenize(s) for s in task_data]
         for i,s in enumerate(captions):
             ds[len(s)].append(i)
 
