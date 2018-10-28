@@ -49,7 +49,7 @@
             "dispFreq"   : 100,
             "summaryFreq": 100,
             "validFreq"  : 500,
-            "decodeFreq" : 1000,
+            "decodeFreq" : 10000,
             "saveFreq"   : 1000,
             "finish"     : 100000
         }
