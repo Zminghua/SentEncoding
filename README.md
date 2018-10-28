@@ -1,3 +1,0 @@
-# SentEncoding
-
-universal sentence representations
