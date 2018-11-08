@@ -1,5 +1,5 @@
 ## Mean-Max AAE
-Sentence encoder and training code for the paper [Learning Universal Sentence Representations with Mean-Max Attention Autoencoder](https://arxiv.org/abs/1809.06590).
+Sentence encoder and training code for the paper [Learning Universal Sentence Representations with Mean-Max Attention Autoencoder](http://aclweb.org/anthology/D18-1481).
 
 ## Dependencies
 This code is written in python. To use it you will need:
@@ -65,9 +65,10 @@ This outputs a numpy array with **n** vectors of dimension **4096**.
 If you found this code useful, please cite the following paper:
 ```
   @inproceedings{zhang2018learning,
-  author = {Zhang, Minghua and Wu, Yunfang and Li, Weikang and Li, Wei},
-  title = {Learning Universal Sentence Representations with Mean-Max Attention Autoencoder},
-  booktitle = {Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
-  year = {2018}
+  title={Learning Universal Sentence Representations with Mean-Max Attention Autoencoder},
+  author={Zhang, Minghua and Wu, Yunfang and Li, Weikang and Li, Wei},
+  booktitle={Proceedings of the 2018 Conference on Empirical Methods in Natural Language Processing},
+  pages={4514--4523},
+  year={2018}
   }
  ```
